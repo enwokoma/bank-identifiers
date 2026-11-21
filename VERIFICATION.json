@@ -1,0 +1,27 @@
+{
+  "verified_on": "2026-11-21",
+  "unit_tests": {
+    "passed": 15,
+    "failed": 0
+  },
+  "full_snapshot_import": {
+    "record_count": 183214,
+    "named_institution_records": 182179,
+    "unresolved_institution_records": 1035
+  },
+  "integration_checks": [
+    "SHA-256 and row count matched manifest",
+    "SBIN0000001 resolves to State Bank of India / KOLKATA MAIN",
+    "AANB0000001 reports unresolved_institution",
+    "Source date and 98-day freshness surfaced",
+    "US lookup correctly reports no imported mapping",
+    "IBAN parsing succeeds but no mapping is claimed",
+    "All JSON files parsed",
+    "11 source catalog entries have unique IDs"
+  ],
+  "limits": [
+    "No live verification of current bank assignments",
+    "No restricted US/BIC/EISCD data loaded",
+    "No hosted service or scheduled refresh deployed"
+  ]
+}

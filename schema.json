@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Institution identifier observation",
+  "description": "One source-scoped mapping per record. Full account numbers and IBANs must not be stored as directory keys.",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scheme": {
+      "enum": [
+        "US_ABA",
+        "BIC",
+        "GB_SORT_CODE",
+        "DE_BLZ",
+        "AU_BSB",
+        "IN_IFSC",
+        "CA_EFT",
+        "NL_BANK_CODE",
+        "FR_BANK_BRANCH",
+        "ES_BANK_BRANCH",
+        "IT_BANK_BRANCH"
+      ]
+    },
+    "country": {
+      "type": "string",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "value": {
+      "type": "string",
+      "minLength": 1
+    },
+    "institution": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "name"
+      ]
+    },
+    "branch": {
+      "anyOf": [
+        {
+          "type": "null"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "address": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "name",
+            "address"
+          ]
+        }
+      ]
+    },
+    "status": {
+      "enum": [
+        "active",
+        "inactive",
+        "unknown"
+      ]
+    },
+    "valid_from": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "valid_to": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1
+        },
+        "snapshot_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [
+        "id",
+        "url",
+        "license",
+        "snapshot_date",
+        "retrieved_at"
+      ]
+    },
+    "payment_networks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "network": {
+            "type": "string",
+            "minLength": 1
+          },
+          "participates": {
+            "type": [
+              "boolean",
+              "null"
+            ]
+          }
+        },
+        "required": [
+          "network",
+          "participates"
+        ]
+      }
+    }
+  },
+  "required": [
+    "record_id",
+    "scheme",
+    "country",
+    "value",
+    "institution",
+    "branch",
+    "status",
+    "valid_from",
+    "valid_to",
+    "source",
+    "payment_networks"
+  ]
+}

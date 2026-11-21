@@ -1,0 +1,67 @@
+{
+  "status": "unresolved_institution",
+  "as_of": "2026-11-21",
+  "validation": {
+    "scheme": "IN_IFSC",
+    "status": "valid_format",
+    "checksum_valid": null,
+    "country": "IN",
+    "lookup": {
+      "scheme": "IN_IFSC",
+      "country": "IN",
+      "value": "AANB0000001"
+    },
+    "validation_scope": "syntax_and_checksum_where_available"
+  },
+  "matches": [
+    {
+      "record_id": "AANB0000001",
+      "scheme": "IN_IFSC",
+      "country": "IN",
+      "value": "AANB0000001",
+      "institution": {
+        "id": "razorpay-ifsc:unresolved:AANB",
+        "name": null
+      },
+      "branch": {
+        "id": "AANB0000001",
+        "name": "RTGS-HO",
+        "address": "2ND FLOOR,MAHAVIR SHOPPING CENTRE,MAHAVIR SOCIETY,AMROLI ROAD,OPP PETROL PUMP,KATARGAM,SURAT 395004"
+      },
+      "status": "unknown",
+      "valid_from": null,
+      "valid_to": null,
+      "source": {
+        "id": "razorpay-ifsc",
+        "url": "https://github.com/razorpay/ifsc/releases/tag/v2.0.62",
+        "license": "MIT (upstream repository; see licenses/RAZORPAY-MIT.txt)",
+        "snapshot_date": "2026-08-15",
+        "retrieved_at": "2026-11-21"
+      },
+      "payment_networks": [
+        {
+          "network": "NEFT",
+          "participates": true
+        },
+        {
+          "network": "RTGS",
+          "participates": true
+        },
+        {
+          "network": "IMPS",
+          "participates": true
+        },
+        {
+          "network": "UPI",
+          "participates": false
+        }
+      ],
+      "freshness": {
+        "age_days": 98,
+        "stale": true,
+        "max_age_days": 30
+      }
+    }
+  ],
+  "coverage": "local_imported_snapshots_only"
+}

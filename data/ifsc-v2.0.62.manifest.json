@@ -1,0 +1,15 @@
+{
+  "id": "razorpay-ifsc",
+  "url": "https://github.com/razorpay/ifsc/releases/tag/v2.0.62",
+  "download_url": "https://github.com/razorpay/ifsc/releases/download/v2.0.62/IFSC.csv",
+  "license": "MIT (upstream repository; see licenses/RAZORPAY-MIT.txt)",
+  "release": "v2.0.62",
+  "published_at": "2026-09-01",
+  "snapshot_date": "2026-08-15",
+  "retrieved_at": "2026-11-21",
+  "record_count": 183214,
+  "expected_release_count": 183214,
+  "sha256": "7abf6c8a2782944094acdb23edd3bd3c77e8602d8bc9545b116fffb1be4e29a3",
+  "original_csv_sha256": "f03870a0ecb06f6c7606c90e4743fc63f9111f088a7175b871c2516bdb8f468e",
+  "freshness_note": "Snapshot date is RBI Update Date in upstream release notes, not per-record verification. Third-party compilation; no claim of current completeness."
+}

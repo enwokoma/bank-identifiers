@@ -1,0 +1,57 @@
+{
+  "as_of": "2026-11-21",
+  "complete_global_directory": false,
+  "included_snapshots": [
+    {
+      "source_id": "razorpay-ifsc",
+      "country": "IN",
+      "scheme": "IN_IFSC",
+      "release": "v2.0.62",
+      "snapshot_date": "2026-08-15",
+      "record_count": 183214,
+      "named_institution_records": 182179,
+      "unresolved_institution_records": 1035,
+      "coverage_claim": "All rows in this pinned upstream CSV; not all current Indian IFSCs.",
+      "live_updates": false
+    }
+  ],
+  "validation_schemes": [
+    "US_ABA",
+    "BIC",
+    "GB_SORT_CODE",
+    "DE_BLZ",
+    "AU_BSB",
+    "IN_IFSC",
+    "CA_EFT",
+    "NL_BANK_CODE",
+    "FR_BANK_BRANCH",
+    "ES_BANK_BRANCH",
+    "IT_BANK_BRANCH"
+  ],
+  "iban_parser_countries": [
+    "DE",
+    "GB",
+    "NL",
+    "FR",
+    "ES",
+    "IT"
+  ],
+  "production_mapping_gaps": [
+    "US_ABA",
+    "BIC",
+    "GB_SORT_CODE",
+    "DE_BLZ",
+    "AU_BSB",
+    "CA_EFT",
+    "NL_BANK_CODE",
+    "FR_BANK_BRANCH",
+    "ES_BANK_BRANCH",
+    "IT_BANK_BRANCH"
+  ],
+  "notes": [
+    "Parser support and data coverage are separate.",
+    "No restricted Federal Reserve, Swift or EISCD bulk records included.",
+    "Upstream blank bank names remain null; no institution name is inferred from the prefix.",
+    "Snapshot freshness is reported; current allocation and network reachability are not certified."
+  ]
+}

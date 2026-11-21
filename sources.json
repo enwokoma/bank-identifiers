@@ -1,0 +1,137 @@
+{
+  "checked_on": "2026-11-21",
+  "sources": [
+    {
+      "id": "aba-rtn",
+      "country_scope": "US",
+      "schemes": "US_ABA",
+      "publisher": "ABA / LexisNexis Risk Solutions",
+      "url": "https://www.aba.com/about-us/routing-number",
+      "coverage": "Registrar-backed routing directory",
+      "access": "Commercial feed; daily or monthly options",
+      "redistribution_status": "contract_required",
+      "refresh": "Per purchased feed",
+      "notes": "Primary candidate for a US production feed; confirm permitted API responses and redistribution."
+    },
+    {
+      "id": "fed-epayments",
+      "country_scope": "US",
+      "schemes": "US_ABA",
+      "publisher": "Federal Reserve Financial Services",
+      "url": "https://www.frbservices.org/resources/e-payments-routing-directory/",
+      "coverage": "FedACH and Fedwire participant information",
+      "access": "Public lookup; bulk access restricted to authorized users",
+      "redistribution_status": "commercial_use_restricted",
+      "refresh": "Daily publisher sync",
+      "notes": "Terms prohibit sale, relicensing and commercial gain: https://www.frbservices.org/terms-of-use/"
+    },
+    {
+      "id": "swift-identifiers",
+      "country_scope": "GLOBAL",
+      "schemes": "BIC;NATIONAL_CODES;IBAN_BANK_CODES",
+      "publisher": "Swift",
+      "url": "https://www.swift.com/products/swiftref",
+      "coverage": "Global institution and national clearing identifiers",
+      "access": "Licensed files/API; product and entitlement dependent",
+      "redistribution_status": "contract_required",
+      "refresh": "Monthly / optional daily files",
+      "notes": "Ask for Identifiers Directory and explicit redistribution terms; legacy Bank Directory Plus is being replaced."
+    },
+    {
+      "id": "swift-bic",
+      "country_scope": "GLOBAL",
+      "schemes": "BIC",
+      "publisher": "Swift",
+      "url": "https://www.swift.com/fr/node/309929",
+      "coverage": "BIC8/BIC11, registered entities and connectivity",
+      "access": "Licensed directory; occasional public BIC search separately",
+      "redistribution_status": "contract_required",
+      "refresh": "Per subscription",
+      "notes": "A BIC can identify a non-financial entity and does not by itself prove network reachability."
+    },
+    {
+      "id": "swift-iban-formats",
+      "country_scope": "IBAN_COUNTRIES",
+      "schemes": "IBAN",
+      "publisher": "Swift ISO 13616 Registration Authority",
+      "url": "https://www.swift.com/standards/data-standards/iban-international-bank-account-number",
+      "coverage": "National format definitions, not account lists or bank-name mappings",
+      "access": "Free format-registry download",
+      "redistribution_status": "not_established",
+      "refresh": "On registry revisions",
+      "notes": "Format source only. Do not confuse a country format with an institution directory. Reference release 103, September 2026."
+    },
+    {
+      "id": "payuk-eiscd",
+      "country_scope": "GB",
+      "schemes": "GB_SORT_CODE",
+      "publisher": "Pay.UK",
+      "url": "https://www.wearepay.uk/what-we-do/industry-services/extended-industry-sort-code-directory/",
+      "coverage": "Sort codes, branch details and clearing participation",
+      "access": "Paid directory / licensed provider",
+      "redistribution_status": "contract_required",
+      "refresh": "Weekly refresh recommended",
+      "notes": "Directory includes Bacs, Faster Payments, CHAPS and cheque clearing information."
+    },
+    {
+      "id": "bundesbank-blz",
+      "country_scope": "DE",
+      "schemes": "DE_BLZ",
+      "publisher": "Deutsche Bundesbank",
+      "url": "https://www.bundesbank.de/en/tasks/payment-systems/services/bank-sort-codes/download-bank-sort-codes-626218",
+      "coverage": "German bank codes, changes and successors",
+      "access": "Public TXT/CSV/XML; official NExt access separately",
+      "redistribution_status": "not_established",
+      "refresh": "Dated validity windows; monitor future files",
+      "notes": "Select currently effective file rather than newest download. Public availability is not a blanket redistribution license."
+    },
+    {
+      "id": "auspaynet-bsb",
+      "country_scope": "AU",
+      "schemes": "AU_BSB",
+      "publisher": "AusPayNet",
+      "url": "https://bsb.auspaynet.com.au/",
+      "coverage": "Australian BSB and institution/branch information",
+      "access": "Public downloads and API registration",
+      "redistribution_status": "not_established",
+      "refresh": "First business day monthly",
+      "notes": "Review terms before publishing data. NPP flag absence is not proof of non-reachability; AP+ BRDT is authoritative for NPP."
+    },
+    {
+      "id": "rbi-neft",
+      "country_scope": "IN",
+      "schemes": "IN_IFSC",
+      "publisher": "Reserve Bank of India",
+      "url": "https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=2009",
+      "coverage": "NEFT-enabled IFSC branches",
+      "access": "Public bank-wise branch files",
+      "redistribution_status": "not_established",
+      "refresh": "Monitor dated releases",
+      "notes": "Official comparison source. Inclusion in one network list is not blanket support for all Indian payment networks."
+    },
+    {
+      "id": "razorpay-ifsc",
+      "country_scope": "IN",
+      "schemes": "IN_IFSC",
+      "publisher": "Razorpay open-source IFSC project",
+      "url": "https://github.com/razorpay/ifsc/releases/tag/v2.0.62",
+      "coverage": "Third-party IFSC compilation; full pinned CSV included",
+      "access": "GitHub release assets",
+      "redistribution_status": "upstream_mit_notice_included",
+      "refresh": "Monitor GitHub releases; no live refresh in this starter",
+      "notes": "Snapshot RBI date 2026-08-15; release published 2026-09-01; 183214 rows; 1035 lack BANK names. Preserve upstream license and provenance."
+    },
+    {
+      "id": "payments-ca-fif",
+      "country_scope": "CA",
+      "schemes": "CA_EFT",
+      "publisher": "Payments Canada",
+      "url": "https://www.payments.ca/systems-services/payment-services/financial-institutions-file",
+      "coverage": "Canadian institution and branch routing identifiers",
+      "access": "FIF subscription; FIBD for occasional reference",
+      "redistribution_status": "contract_required",
+      "refresh": "Weekly",
+      "notes": "Nonparticipants generally subscribe through a sponsoring participant. Electronic and paper routing formats differ."
+    }
+  ]
+}
